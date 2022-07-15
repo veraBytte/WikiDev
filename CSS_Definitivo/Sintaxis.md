@@ -26,7 +26,7 @@ this is a under line ~~text~~
 
 > this is a quote
 
----
+------
 ```javascript
 function fancyAlert(arg) {
   if(arg) {
