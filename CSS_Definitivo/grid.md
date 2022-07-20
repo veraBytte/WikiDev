@@ -37,6 +37,19 @@ gap : 5px 5px;
 /*Filas / Columnas*/
 ```
 
+Tambien cuando estamos utilizando css grid tenemos una nueva unidad de medida y estas son los fr o fraccion
+
+Una fr equivale a una fraccion por lo tanto si las utilizamos en las columnas, nos las dividira en 2 partes iguales
+
+```css
+.container{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    }
+```
+
+> Tip: esto tambien se puede hacer xon los rows pero para eso nesecitamos tener un alto definido en el contendor
+
 * Areas : Estas son un conjunto de celdas dentro de la grid 
 ![Visual studio code logo](https://static.platzi.com/media/user_upload/www.canva.com_design_DAEPC3ca3BQ_Dldv9zjYSIE0LBb-BzEQng_view_utm_content%3DDAEPC3ca3BQ%26utm_campaign%3Ddesignshare%26utm_medium%3Dlink%26utm_source%3Dsharebutton%20%281%29-80d0810a-99e2-49d9-91c3-40034583f693.jpg)
 Las cuales definimos de la siguiente manera
