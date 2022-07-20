@@ -62,11 +62,30 @@ grid-template-areas: "header header  header header  header"
 ```
 
 ```css
+grid-row: 2 / 1
+    /*Primer parametro el inicio de la row*/
+    /*Segundo parametro el fin de la row*/
+```
+
+```css
+grid-column: 2 / 1
+    /*Primer parametro el inicio de la column*/
+    /*Segundo parametro el fin de la column*/
+```
+SHORTHAND
+```css
 grid-area: 2 / 1 / 4 / 3
     /*Primer parametro el inicio de la row*/
     /*Segundo parametro el inicio de la column*/
     /*Tercer parametro el fin de la row */
     /*Cuarto parametro el fin de la column*/
+```
+
+Otro parametro que podemos utilizar es el elemento de ""span""
+Y este parametro nos ayuda a evitar el uso de las lineas ya que se le indica que tome desde el origen hasta la linea objetivo
+```css
+grid-column: span 4
+    /*grid-column: 1 / 4 es lo mismo*/
 ```
 
 ## Alineamiento
