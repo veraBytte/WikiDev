@@ -61,12 +61,33 @@ grid-template-areas: "header header  header header  header"
                      "footer footer  footer footer  footer";
 ```
 
+```css
+grid-area: 2 / 1 / 4 / 3
+    /*Primer parametro el inicio de la row*/
+    /*Segundo parametro el inicio de la column*/
+    /*Tercer parametro el fin de la row */
+    /*Cuarto parametro el fin de la column*/
+```
+
 ## Alineamiento
 
 Cuando estamos intentando alinear los elementos con grid hay que tener en cuenta que no podmeos alinear distintos contenedores en distintas posciones respecto al padre 
 
 ![Imagen de alineamiento](https://static.platzi.com/media/user_upload/%C3%B1o-e69efa2d-7bcb-4339-a33d-8efb81c3c710.jpg)
 
+Sin embargo si podemos mover las celdas a nuestro gusto y para eso utilizamos los siguientes atributos
+
+```css
+.item1{
+    grid-column-start: /*El numero de la linea
+    de la columna donde quiero aue comience
+    mi elemento*/;
+    grid-column-end: /*El numero de la linea
+    de la columna donde quiero aue termine
+    mi elemento*/;
+}
+```
+https://www.youtube.com/watch?v=iXTku78meNM&list=PLhSj3UTs2_yWsFd43wpLog5HUFzDgIbWj&index=5
 ### Propiedades
 
 | Propiedad|Eje         | 
