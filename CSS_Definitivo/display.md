@@ -81,7 +81,15 @@ El contenedor padre tiene display flex por lo que automaticamente el comportamie
 ###### Propiedades
 1. **Justify Content** : Me alinia los contenedores en el eje x
 2. **Align-Itmes** : Me alinia los contenedores en el eje y
-    * **Stretch** : En caso de que los contenedores no tengan una altura definida estos se estiraran hasta los limites de su contenedor padre     
+
+>**Nota**: que cuando es una columna, justify-content cambia a vertical y align-items a horizontal.
+
+>**Nota**:cuando estableces la dirección a una fila invertida o columna, el inicio y el final también se invierten.
+
+
+
+
+  * **Stretch** : En caso de que los contenedores no tengan una altura definida estos se estiraran hasta los limites de su contenedor padre     
 
     ```
     .container{
@@ -93,7 +101,7 @@ El contenedor padre tiene display flex por lo que automaticamente el comportamie
         width: 10rem;
     }
     ``` 
-    * **Baseline** :Caso contratio a stretch
+  * **Baseline** :Caso contratio a stretch
 
 3. Flex tambien tiene una propiedad interesante para indicarle en que orden organize los contenedores y esto lo utilizamos con la propiedad *order*
 
@@ -114,3 +122,4 @@ El contenedor padre tiene display flex por lo que automaticamente el comportamie
   flex-grow: 1;
 }
 ``` 
+ 5. **align-self:** Otra propiedad que puedes aplicar a elementos individuales es align-self. Esta propiedad acepta los mismos valores de align-items y sus valores son usados para un elemento específico.
