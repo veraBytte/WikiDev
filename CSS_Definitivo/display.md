@@ -32,7 +32,7 @@ La propiedad flex genera que los contenedores, se comporten de manera distinta e
   </main>
 ```
 ###### CSS
-```
+```CSS
     *{
     box-sizing: border-box;
     margin: 0;
@@ -122,4 +122,24 @@ El contenedor padre tiene display flex por lo que automaticamente el comportamie
   flex-grow: 1;
 }
 ``` 
- 5. **align-self:** Otra propiedad que puedes aplicar a elementos individuales es align-self. Esta propiedad acepta los mismos valores de align-items y sus valores son usados para un elemento específico.
+ 5. **align-self :** Otra propiedad que puedes aplicar a elementos individuales es align-self. Esta propiedad acepta los mismos valores de align-items y sus valores son usados para un elemento específico.
+
+ 6. **flex-flow :** Las dos propiedades flex-direction y flex-wrap son usadas a menudo en conjunto con la propiedad abreviada flex-flow, Por ejemplo, puedes usar flex-flow para establecer filas y envolverlas.
+
+```css
+.container{
+  display: flex;
+  flex-flow: column wrap
+  /*direccion wrap*/
+}
+```
+
+7.  **align-content :** Esta propiedad acepta los siguientes valores:
+* flex-start: Las líneas se posicionan en la parte superior del contenedor.
+* flex-end: Las líneas se posicionan en la parte inferior del contenedor.
+* center: Las líneas se posicionan en el centro (verticalmente hablando) del contenedor.
+* space-between: Las líneas se muestran con la misma distancia entre ellas.
+* space-around: Las líneas se muestran con la misma separación alrededor de ellas.
+* stretch: Las líneas se estiran para ajustarse al contenedor.
+
+Esto puede ser confuso, pero align-content determina el espacio entre las líneas, mientras que align-items determina como los elementos en su conjunto están alineados dentro del contenedor. Cuando hay solo una línea, align-content no tiene efecto.
