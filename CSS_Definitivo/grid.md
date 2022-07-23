@@ -246,3 +246,12 @@ La función fit-content() organiza un contenido en especifico el cual lo reserva
 Lo que hace es establecer un ancho máximo o algo así, necesita tener obligatorimente contenido adentro que lo haga crecer, no funciona por sí solo
 
 En ese caso funciona como el width: auto; junto con el width-max, en donde se dice que el ancho del elemento depende de su contenido, pero sin rebasar un ancho establecido en el width-max
+
+
+## Alineamiento en los elementos hijos
+
+1. Justify-self : Nos permite alinear nuestros elementos de forma horizontal (axis:inline)
+
+2. Align-self : Nos permite alinear nuestros elementos de forma vertical (axis:block)
+
+3. Place-self : Es una abreviacion de align-self y justify-self 
