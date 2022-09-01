@@ -142,4 +142,38 @@ El contenedor padre tiene display flex por lo que automaticamente el comportamie
 * space-around: Las líneas se muestran con la misma separación alrededor de ellas.
 * stretch: Las líneas se estiran para ajustarse al contenedor.
 
-Esto puede ser confuso, pero align-content determina el espacio entre las líneas, mientras que align-items determina como los elementos en su conjunto están alineados dentro del contenedor. Cuando hay solo una línea, align-content no tiene efecto.
+Esto puede ser confuso, pero align-content determina el espacio entre las líneas cunado hacemos un wrap, mientras que align-items determina como los elementos en su conjunto están alineados dentro del contenedor. Cuando hay solo una línea, align-content no tiene efecto.
+
+align-items es para una sola «línea» y es aplicado a cada elemento, mientras align-content aplica para las líneas (no exactamente a los elementos) cuando hay más de una.
+
+## Dimensionamiento Flexible
+
+Volvamos ahora a nuestro primer ejemplo y veamos cómo podemos controlar qué proporción de espacio ocupan los elementos flexibles. Inicia tu copia local de flexbox0.html o toma una copia de flexbox1.html como nuevo punto de partida (consúltalo en vivo).
+
+Primero, añade la regla siguiente al final de tu CSS:
+
+article {
+  flex: 1;
+}
+
+Este es un valor de proporción sin unidades que especifica la cantidad de espacio disponible sobre el eje principal que ocupa cada elemento flexible. En este caso, damos a cada elemento <article> un valor de 1, lo que significa que todos ocuparán una cantidad igual del espacio libre restante después de que se hayan establecido elementos como el área de relleno y el margen. Es una proporción, lo que significa que dar a cada elemento flexible un valor de 400000 tendría exactamente el mismo efecto.
+
+Ahora añade la regla siguiente debajo de la anterior:
+
+article:nth-of-type(3) {
+  flex: 2;
+}
+Copy to Clipboard
+Al actualizar verás que el tercer <article> ocupa ahora el doble del ancho disponible que los otros dos; ahora hay cuatro unidades de proporción disponibles en total. Los primeros dos elementos flexibles tienen una cada uno, por lo que ocupan 1/4 del espacio disponible cada uno. El tercero tiene dos unidades, por lo que ocupa 2/4 del espacio disponible (o 1/2).
+
+También puedes especificar un valor de tamaño mínimo dentro del valor flexible. Actualiza las reglas para tu artículo de la manera siguiente:
+
+article {
+  flex: 1 200px;
+}
+
+article:nth-of-type(3) {
+  flex: 2 200px;
+}
+Copy to Clipboard
+Esto establece básicamente que «a cada elemento flexible se le da primero 200px del espacio disponible. Después de eso, el resto del espacio disponible se reparte de acuerdo con las unidades de proporción». Actualiza y observa de qué modo se reparte ahora el espacio.
